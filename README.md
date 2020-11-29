@@ -9,5 +9,5 @@ I am also not super-familiar with JavaScript, with Python being my usual languag
 Therefore, I invite anyone who can to come and help turn this janky-ass extension into something that works a bit nicer.
 
 ### Note:
-This extension only changes text contained within `<p>paragraph</p>` or `<span>span</span>` tags, and can break some websites' formatting/
+This extension only changes text contained within `<p></p>` or `<span></span>` tags, and can break some websites' formatting/
 If a website doesn't like the extension's reformatting decisions, simply refresh and it will revert to normal.
