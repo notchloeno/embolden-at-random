@@ -1,5 +1,6 @@
 # EmboldenAtRandom
 ### How to install
+Video tutorial: https://www.youtube.com/watch?v=_kE8_gFcc58
 The process is relatively simple:
 * [Download the extension as a .zip](https://github.com/notjoshno/embolden-at-random/archive/master.zip)
 * Extract the .zip file into a folder somewhere on your computer. If this folder is deleted your extension will no longer work.
