@@ -1,0 +1,26 @@
+{
+  "name": "Embolden At Random",
+  "version": "1.0",
+  "description": "Randomly changes words in large chunks of text to bold to make reading easier for ADHD folk",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": ["jquery.js","content.js"],
+      "css": ["bold.css"]
+    }
+  ],
+  "manifest_version": 2
+}
