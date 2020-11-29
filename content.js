@@ -11,8 +11,23 @@ let genCount = function(){
 };
 let activated = false;
 
+
 chrome.runtime.onMessage.addListener(receiveFunc);
 function receiveFunc(){
+    let url = location.href.toLowerCase();
+    let components = url.split(".");
+    let main = components[1];
+    console.log(main);
+
+    let openTag = "<b>";
+    let closeTag = "</b>";
+    // Different sites use different tags for emboldening
+    switch(main){
+        case "reddit":
+            openTag = "<strong class=\"_12FoOEddL7j_RgMQN0SNeU\">"
+            closeTag = "</strong>"
+    }
+
     if(!activated){
         activated = true;
 
@@ -27,14 +42,13 @@ function receiveFunc(){
             paragraph.forEach(word => {
                 if (count === 0) {
                     count = genCount();
-                    newHTML += bolding ? "<b class=\"css-14iz86j-BoldText e5tfeyi0\">" : "</b>";
+                    newHTML += bolding ? openTag : closeTag;
                     bolding = !bolding;
                 }
                 newHTML += word + " ";
                 count -= 1;
             });
-            newHTML += "</b></p>";
-            console.log(newHTML);
+            newHTML += bolding ? "<p>" : closeTag + "</p>";
             $(this).html(newHTML);
         });
 
@@ -50,14 +64,13 @@ function receiveFunc(){
             paragraph.forEach(word => {
                 if (count === 0) {
                     count = genCount();
-                    newHTML += bolding ? "<b class=\"css-14iz86j-BoldText e5tfeyi0\">" : "</b>";
+                    newHTML += bolding ? openTag : closeTag;
                     bolding = !bolding;
                 }
                 newHTML += word + " ";
                 count -= 1;
             });
-            newHTML += "</b></span>";
-            console.log(newHTML);
+            newHTML += bolding ? "<span>" : closeTag + "</span>";
             $(this).html(newHTML);
         });
     }
