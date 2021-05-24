@@ -1,4 +1,7 @@
 # EmboldenAtRandom
+
+(If you're an employer please don't judge me on this code! It was written at god knows when in the morning and was my first tangle with Chrome Extension development and jQuery, which lead to some very inefficient code and the storing of tag data within the program itself. If you want to see some of my better work please check out https://github.com/notjoshno/CA3).
+
 ### How to install
 Video tutorial: https://www.youtube.com/watch?v=_kE8_gFcc58
 
@@ -12,9 +15,6 @@ The process is relatively simple:
 * At the top right of chrome, next to the URL bar, there should be a small puzzle icon. This is your extensions options menu.
 * Click the puzzle icon, and pin EmboldenAtRandom
 * The extension is now installed! Simply navigate to a webpage with a lot of text and click the icon at the top-right to embolden some stuff.
-
-### Why is this not on the Chrome Extension Market?
-There is a $5 registration fee and I am currently bankrupt, sorry!
 
 ### About the project:
 This is a Chrome extension that adds an icon to your taskbar which, when clicked, randomly changes randomly sized chunks of text on a web-page to be bold.
